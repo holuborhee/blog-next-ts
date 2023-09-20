@@ -19,7 +19,7 @@ export default function CreatorProfile({creator, post}: {creator: IUser, post: I
         } else {
             setIsPostOwner(false)
         }
-    }, [])
+    }, [creator.username])
     return (
         <>
             <ManagePost post={post} openDialog={isCreatingPost} setOpenDialog={setIsCreatingPost} />

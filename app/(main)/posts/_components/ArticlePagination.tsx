@@ -2,7 +2,7 @@
 import Pagination from "@mui/material/Pagination";
 import { useRouter } from 'next/navigation';
 
-export default async function ArticlePagination({pageCount, page}: {pageCount: number, page?: number}){
+export default function ArticlePagination({pageCount, page}: {pageCount: number, page?: number}){
     const router = useRouter()
     const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
         const query = value ? `?page=${value}` : ''

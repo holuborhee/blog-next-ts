@@ -128,7 +128,7 @@ export default function Authlayout({
                 <Alert severity="error" sx={{mb: 4}}>
                   <AlertTitle>Form Validation error</AlertTitle>
                   {
-                    errors.map(err=><p><strong>{err}</strong></p>)
+                    errors.map((err, i)=>(<p key={i}><strong>{err}</strong></p>))
                   }
                 </Alert>
               )
